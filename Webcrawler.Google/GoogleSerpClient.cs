@@ -30,7 +30,7 @@ namespace Webcrawler.Google
 
 			return result;
 		}
-		private protected string BuildGoogleSearchQuery(string searchTerm, int snippetCount)
+		private string BuildGoogleSearchQuery(string searchTerm, int snippetCount)
 		{
 			searchTerm = searchTerm.Replace(" ", "+");
 			return String.Format("http://www.google.com/search?q={0}&num={1}", searchTerm, snippetCount);

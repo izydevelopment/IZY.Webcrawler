@@ -12,15 +12,10 @@ namespace Webcrawler.ConsoleApp
 {
 	class Program
 	{
-
-		private static ILog logger = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-
 		static void Main(string[] args)
 		{
-			logger.Debug("Test");
-
 			var serpClient = new GoogleSerpClient();
-			var serpResult = serpClient.Get("tretroller", 100);
+			var serpResult = serpClient.Get("kuchen", 100);
 
 			var websites = new List<HtmlPage>();
 

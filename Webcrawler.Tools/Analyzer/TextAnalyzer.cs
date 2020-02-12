@@ -114,7 +114,7 @@ namespace Webcrawler.Tools.Analyzer
 			return result.OrderByDescending(x => x.Value).ToDictionary(x => x.Key, y => y.Value);
 		}
 
-		private protected string RemoveHtmlTags(string input)
+		private string RemoveHtmlTags(string input)
 		{
 			return Regex.Replace(input, "<.*?>", " ");
 		}
@@ -125,7 +125,7 @@ namespace Webcrawler.Tools.Analyzer
 		/// <param name="content">Der zu bereinigende Inhalt</param>
 		/// <param name="removePunctuation">Gibt an, ob alle Sonderzeichen entfernt werden sollen</param>
 		/// <returns name ="result">Der bereinigte Inhalt</returns>
-		private protected string GetCleanContent(string content, bool removePunctuation = false)
+		private string GetCleanContent(string content, bool removePunctuation = false)
 		{
 			content = RemoveHtmlTags(content);
 			content = System.Net.WebUtility.HtmlDecode(content);

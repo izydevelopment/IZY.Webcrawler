@@ -22,7 +22,7 @@ namespace Webcrawler.Tools.Stopwords
 
 			return result;
 		}
-		private protected string GetFilePath(string path, string folderName, string fileName)
+		private string GetFilePath(string path, string folderName, string fileName)
 		{
 			path = path.Replace(@"bin\Debug\netcoreapp2.1", String.Empty);
 			path = path.Replace(".ConsoleApp", ".Tools");
